@@ -82,13 +82,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "--depth_map",
-    type=float,
-    default=0.8,
-    help="Strength"
-)
-
-parser.add_argument(
     "--strength",
     type=float,
     default=0.8,
@@ -182,7 +175,6 @@ with autocast("cuda"), torch.inference_mode():
     images = pipeline(
         prompt=ap.prompt,
         image=image_org,
-        depth_map = ap.depth_map,
         generator = generator,
         negative_prompt=ap.negative_prompt,
         num_images_per_prompt=ap.samples,
