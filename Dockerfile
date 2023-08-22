@@ -5,6 +5,7 @@ WORKDIR /diffusers_all
 COPY text_to_image.py /diffusers_all/
 COPY img_to_img.py /diffusers_all/
 COPY inpainting.py /diffusers_all/
+COPY depth_to_image.py /diffusers_all/
 COPY requirements.txt /diffusers_all/
 RUN pip install scipy
 RUN pip install -r requirements.txt
