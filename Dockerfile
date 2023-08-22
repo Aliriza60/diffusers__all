@@ -9,4 +9,4 @@ COPY depth_to_image.py /diffusers_all/
 COPY requirements.txt /diffusers_all/
 RUN pip install scipy
 RUN pip install -r requirements.txt
-CMD ["python","text_to_image.py","img_to_img.py","inpainting.py"]
+CMD ["python","text_to_image.py","img_to_img.py","inpainting.py","depth_to_image.py"]
